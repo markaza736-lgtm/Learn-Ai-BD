@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnAI BD | Smart Tutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-container">
+        <div class="auth-card">
+            <h1>LearnAI BD</h1>
+            <p>আপনার ব্যক্তিগত এআই শিক্ষক</p>
+            <input type="email" id="email" placeholder="ইমেইল (Valid Email)">
+            <input type="tel" id="phone" placeholder="ফোন নম্বর">
+            <input type="password" id="pass" placeholder="পাসওয়ার্ড">
+            <button class="btn-main" onclick="startApp()">অ্যাকাউন্ট তৈরি করুন 🚀</button>
+        </div>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h3>মেনুবার</h3>
+            <span onclick="toggleMenu()" class="close-btn">&times;</span>
+        </div>
+        <ul class="sidebar-links">
+            <li onclick="showSection('chat')">💬 চ্যাট রুম</li>
+            <li onclick="showSection('subscription')">💎 সাবস্ক্রিপশন প্ল্যান</li>
+            <li onclick="showSection('contact')">📞 যোগাযোগ (Support)</li>
+            <li onclick="location.reload()" style="color: #ff4757; margin-top: 50px; font-weight: bold;">🚪 লগ আউট</li>
+        </ul>
+    </div>
+    <div id="backdrop" class="backdrop" onclick="toggleMenu()"></div>
+
+    <div id="app-container" class="hidden">
+        <header>
+            <div class="header-left">
+                <div class="menu-icon" onclick="toggleMenu()">☰</div>
+                <div class="user-img">U</div>
+                <div id="display-email">loading...</div>
+            </div>
+            <span class="badge">FREE</span>
+        </header>
+
+        <main id="chat-section" class="content">
+            <div id="chat-box">
+                <div class="chat-bubble ai-bubble">আসসালামু আলাইকুম! আমি আপনার এআই শিক্ষক। আপনার পড়ালেখা নিয়ে যেকোনো প্রশ্ন করতে পারেন।</div>
+            </div>
+            <div class="input-bar">
+                <label for="fileInput" class="icon-btn camera-btn">📸</label>
+                <input type="file" id="fileInput" style="display:none;">
+                <textarea id="userInput" placeholder="প্রশ্ন লিখুন..."></textarea>
+                <button class="icon-btn btn-send" onclick="askTeacher()">🚀</button>
+            </div>
+        </main>
+
+        <main id="subscription-section" class="content hidden p-20">
+            <h2>💎 প্রিমিয়াম প্ল্যান</h2>
+            <div class="plan-card">
+                <h3>বেসিক (ফ্রি)</h3>
+                <p>১০টি প্রশ্ন প্রতিদিন</p>
+                <button disabled>Active</button>
+            </div>
+            <div class="plan-card gold">
+                <h3>প্রো (৳ ১৯৯/মাস)</h3>
+                <p>আনলিমিটেড প্রশ্ন + ইমেজ এনালাইসিস</p>
+                <button onclick="alert('বিকাশ পেমেন্ট গেটওয়ে শীঘ্রই যুক্ত করা হবে!')">Upgrade Now</button>
+            </div>
+        </main>
+
+        <main id="contact-section" class="content hidden p-20">
+            <h2>📞 যোগাযোগ করুন</h2>
+            <p>আপনার কোনো সমস্যা হলে আমাদের জানান:</p>
+            <div class="contact-box">
+                <p>📧 ইমেইল: support@learnaibid.com</p>
+                <p>📱 ফোন: +৮৮০ ১৭XXXXXXXX</p>
+                <p>📍 ঢাকা, বাংলাদেশ</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
