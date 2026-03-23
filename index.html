@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnAI BD</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #007bff, #00d4ff); display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; color: white; text-align: center; }
+        .card { background: white; color: black; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); width: 90%; max-width: 400px; }
+        button { background: #007bff; color: white; border: none; padding: 15px 30px; border-radius: 10px; font-size: 18px; cursor: pointer; margin-top: 20px; width: 100%; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 10px; box-sizing: border-box; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div id="main-box" class="card">
+        <h1>LearnAI BD</h1>
+        <p>সরাসরি প্রবেশ করতে নিচের বাটনে ক্লিক করুন</p>
+        <button onclick="enterSite()">প্রবেশ করুন 🚀</button>
+    </div>
+
+    <div id="app-content" class="card hidden">
+        <h2>স্বাগতম! 🎓</h2>
+        <p>আপনার এআই শিক্ষক এখন রেডি।</p>
+        <p>লিঙ্ক ছোট করতে TinyURL ব্যবহার করুন।</p>
+        <button onclick="location.reload()" style="background: red;">লগ আউট</button>
+    </div>
+
+    <script>
+        function enterSite() {
+            document.getElementById('main-box').classList.add('hidden');
+            document.getElementById('app-content').classList.remove('hidden');
+            alert("সফলভাবে প্রবেশ করেছেন!");
+        }
+    </script>
+</body>
+</html>
